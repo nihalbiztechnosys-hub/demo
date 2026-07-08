@@ -5,9 +5,9 @@ pipeline {
     }
     stages {
 
-        stage('Install Dependencies') {
+        stage('Install Dependenciess') {
             steps {
-                // 'bat' runs commands through Windows cmd.exe
+             
                 bat 'npm install'
             }
         }
@@ -29,7 +29,7 @@ pipeline {
 
     post {
         always {
-            // Publishes the Playwright HTML report as a link on the build page
+
             publishHTML(target: [
                 allowMissing: true,
                 alwaysLinkToLastBuild: true,
