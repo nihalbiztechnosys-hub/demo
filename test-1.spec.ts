@@ -19,7 +19,7 @@ test('test', async ({ page }) => {
   await page.getByRole('listitem').filter({ hasText: 'OUR BRAND' }).click();
   await page.getByRole('listitem').filter({ hasText: 'FUTURE INNOVATION' }).click();
   await page.getByRole('link', { name: 'LATEST NEWS' }).click();
-    await page.goto('https://honda-mideast.com/en-om');
+    await page.goto('https://honda-mideast.com/en-sa');
   await page.locator('#latest__news__slider--image').click();
   await page.getByText('2 34').click();
   await page.getByText('2 34').click();
