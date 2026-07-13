@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../Components/HomePage';
+import { HomePage } from '../Components';
 
 test.describe('Zenith Studio — Home Page', () => {
   let homePage: HomePage;
@@ -28,14 +28,13 @@ test.describe('Zenith Studio — Home Page', () => {
   test('professional plan is marked most popular', async () => {
     expect(await homePage.pricing.isMostPopular('Professional')).toBe(true);
   });
-  
-test('Get Started button click does not navigate (not yet wired up)', async ({ page }) => {
-  const urlBefore = page.url();
-  await homePage.pricing.clickPlanButton('Professional');
-  await page.waitForTimeout(500); // brief wait to rule out delayed navigation
-  expect(page.url()).toBe(urlBefore);
-});
 
+  test('Get Started button click does not navigate (not yet wired up)', async ({ page }) => {
+    const urlBefore = page.url();
+    await homePage.pricing.clickPlanButton('Professional');
+    await page.waitForTimeout(500); // brief wait to rule out delayed navigation
+    expect(page.url()).toBe(urlBefore);
+  });
 
   test('mobile menu opens and navigates to pricing', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
