@@ -1,0 +1,9 @@
+export { HomePage } from './HomePage';
+export { NavbarComponent } from './NavbarComponent';
+export { HeroComponent } from './HeroComponent';
+export { ServicesComponent } from './ServicesComponent';
+export { PortfolioComponent } from './PortfolioComponent';
+export { TestimonialsComponent } from './TestimonialsComponent';
+export { PricingComponent } from './PricingComponent';
+export { CtaComponent } from './CtaComponent';
+export { FooterComponent } from './FooterComponent';
