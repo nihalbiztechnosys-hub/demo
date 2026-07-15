@@ -6,8 +6,7 @@ test.describe('Zenith Studio — Home Page', () => {
 
   test.beforeEach(async ({ page, baseURL }) => {
     homePage = new HomePage(page);
-    // Relative path + config baseURL, so this works locally AND in Jenkins
-    // via the webServer block in playwright.config.ts.
+   
     await homePage.goto('/index.html');
   });
 
