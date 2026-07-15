@@ -6,7 +6,7 @@ test.describe('Zenith Studio — Home Page', () => {
 
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page);
-    await homePage.goto('/'); // replace with actual base URL / file path
+    await homePage.goto('/'); 
   });
 
   test('hero CTA navigates to contact section', async ({ page }) => {
@@ -32,7 +32,7 @@ test.describe('Zenith Studio — Home Page', () => {
   test('Get Started button click does not navigate (not yet wired up)', async ({ page }) => {
     const urlBefore = page.url();
     await homePage.pricing.clickPlanButton('Professional');
-    await page.waitForTimeout(500); // brief wait to rule out delayed navigation
+    await page.waitForTimeout(500); 
     expect(page.url()).toBe(urlBefore);
   });
 
