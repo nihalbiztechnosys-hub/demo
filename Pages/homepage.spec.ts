@@ -37,7 +37,7 @@ test('Get Started button click does not navigate (not yet wired up)', async ({ p
 });
 
 
-  test('mobile menu opens and navigates to pricing', async ({ page }) => {
+  test('mobile menu opens and navigates to price', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
     await homePage.navbar.gotoSectionMobile('Pricing');
     await expect(homePage.pricing.sectionTitle).toBeVisible();
