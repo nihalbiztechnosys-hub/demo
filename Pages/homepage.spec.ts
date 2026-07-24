@@ -17,7 +17,7 @@ test.describe('Zenith Studio — Home Page', () => {
 
   test('services section lists 5 cards', async () => {
     // Note: only 5 render — the "UI/UX Design" card is commented out in the HTML.
-    expect(await homePage.services.count()).toBe(4);
+    expect(await homePage.services.count()).toBe(5);
     const titles = await homePage.services.getAllTitles();
     expect(titles).toContain('Web Development');
   });
