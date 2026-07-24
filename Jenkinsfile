@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment {
         CI = 'true'
-        SLOWMO_MS = '1000'
     }
     stages {
 
@@ -22,8 +21,8 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                // Executes all Playwright test specs in Chrome with the browser window visible
-                bat 'npx playwright test --headed --project=chromium'
+                // Executes all Playwright test specs
+                bat 'npx playwright test'
             }
         }
     }
